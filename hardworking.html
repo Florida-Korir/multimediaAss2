@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida Korir's blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: hsla(330, 100%, 94%, 0.789);
+            color: #070707;
+            text-align: center;
+            padding: 0.5em;
+            font-family: sitka;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.604) 10%, rgba(255, 182, 193, 0) 70%);
+            animation: bubble 10s linear infinite;
+        }
+
+        @keyframes bubble {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(50%, -50%);
+            }
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .half-screen {
+            width: 100%; /* full width on small screens */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .half-screen img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .half-screen:hover img {
+            transform: scale(1.1);
+        }
+
+        .poem {
+            width: 100%; 
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: sitka;
+            font-size: 18px; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Media Queries */
+        @media only screen and (min-width: 600px) {
+            .half-screen {
+                width: 50%;
+            }
+
+            .poem {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Florida Korir's blog</h1>
+    </header>
+
+    <section>
+        <div class="half-screen">
+            <img src="16.jpeg" alt="Main Picture">
+        </div>
+        <div class="poem">
+            <p>
+                I admired reading books,<br>
+                Every Single night,<br>
+                I admire the romantic,<br>
+                I admire reading The firm.<br>
+                I still value how books give me a sense of belonging,<br>
+                Trying to make valuethe most out of it.<br>
+                It is mind-blowing.<br>
+                Books are amazing, on that I'm sure you knew.<br>
+                soon enough!<br>
+                I will write my own book<br>
+                
+                From your favourite blog post, <br>
+                <b>Florida korir</b>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Crafted with love by Florida Korir</p>
+    </footer>
+</body>
+
+</html>

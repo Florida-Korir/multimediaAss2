@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLorida Korir's Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: hsla(202, 39%, 78%, 0.789);
+            color: #070707;
+            text-align: center;
+            padding: 0.5em;
+            font-family: sitka;
+            position: relative;
+        }
+
+        /* Bubble Animation */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(56, 109, 46, 0.679) 10%, rgba(255, 255, 255, 0) 70%);
+            animation: bubble 10s linear infinite;
+        }
+
+        @keyframes bubble {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(50%, -50%);
+            }
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .half-screen {
+            width: 100%; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        .half-screen img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .half-screen:hover img {
+            transform: scale(1.1);
+        }
+
+        .poem {
+            width: 100%; 
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .project-box {
+            width: 100%; 
+            margin: 15px;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .project-box:hover img {
+            transform: scale(1.1);
+            opacity: 0.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05) translateY(10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            background-color: #90c1de;
+        }
+
+        .project-text {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            transition: opacity 0.3s;
+            color: #333;
+            font-family: Arial;
+        }
+
+        .project-text button,
+        .project-text button+span {
+            background-color: #9dffb3;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .centered-text {
+            text-align: center;
+            margin-top: 20px;
+            font-family: sitka;
+        }
+
+        hr:nth-child(2) {
+            border: none;
+            background: none;
+            height: 0;
+            margin: 0;
+            display: none;
+        }
+
+        /* Additional style for the separator */
+        .separator {
+            width: 100%;
+            border: none;
+            height: 2px;
+            background-color: #333;
+            margin: 20px 0;
+        }
+
+        body {
+            overflow: auto;
+        }
+
+        .bigger-box {
+            padding: 30px;
+            font-size: 20px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* Adjusts styles for screens wider than 600px */
+            .half-screen {
+                width: 50%;
+            }
+
+            .poem {
+                width: 50%;
+            }
+
+            .project-box {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Florida Korir's blog</h1>
+    </header>
+
+    <section>
+        <div class="half-screen">
+            <img src="3" alt="Main Picture">
+        </div>
+        <div class="poem">
+            <p>My blog post stories are all about me,<br>
+                My personality,<br>
+                My designs,<br>
+                and my books.<br>
+                With every post, I share insights,<br>
+                Solutions to problems, we face as teenagers.<br>
+                Join me on this journey of discovery,<br>
+                Together.<br>
+                <b>Florida Korir</b>
+            </p>
+        </div>
+        <hr class="separator">
+        <h2 class="centered-text">Welcome! To the world of Florida</h2>
+        <hr class="separator">
+        <div class="project-box">
+            <a href="hardworking.html">
+                <img src="13.jpeg" alt="Project 1">
+            </a>
+           <div class="project-text"><b><i>Books<br><button onclick="window.location.href = 'hardworking.html'">Learn more</button></i></b></div>
+        </div>
+        <div class="project-box">
+            <a href="loving.html">
+              <img src="2" alt="Project 1">  
+            </a>
+            <div class="project-text"><b><i>Designs<br><button onclick="window.location.href = 'loving.html'">Learn more</button></i></b></div>
+        </div>
+        <div class="project-box">
+            <a href="lively.html">
+               <img src="8.jpeg" alt="Project 2"> 
+            </a>
+            <div class="project-text "><b><i>Personality<br><button onclick="window.location.href = 'lively.html'">Learn more</button></i></b></div>
+        </div>
+    </section>
+    <footer>
+        <p>Crafted with love by Florida Korir</p>
+    </footer>
+
+    <script>
+        function openProject(projectName) {
+            alert('Clicked on ' + projectName);
+        }
+    </script>
+</body>
+</html>

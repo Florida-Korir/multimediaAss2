@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida korir's blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: hsla(197, 80%, 66%, 0.789);
+            color: #070707;
+            text-align: center;
+            padding: 0.5em;
+            font-family: sitka;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(233, 109, 214, 0.527) 10%, rgba(188, 123, 133, 0) 70%);
+            animation: bubble 10s linear infinite;
+        }
+
+        @keyframes bubble {
+            from {
+                transform: translate(0, 0);
+            }
+            to {
+                transform: translate(50%, -50%);
+            }
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .half-screen {
+            width: 100%; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        .half-screen img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .half-screen:hover img {
+            transform: scale(1.1);
+        }
+
+        .poem {
+            width: 100%; 
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: sitka;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Media Queries */
+        @media only screen and (min-width: 600px) {
+            .half-screen {
+                width: 50%;
+            }
+
+            .poem {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Florida Korir's blog</h1>
+    </header>
+
+    <section>
+        <div class="half-screen">
+            <img src="21.jpeg" alt="Main Picture">
+        </div>
+        <div class="poem">
+            <p>
+                <b>A Note to all my readers.</b><br>
+                Hey all,<br>
+                Just wanted to say, you  coming here,<br>
+               makes the best part of my days<br>
+                I cherish a loving personality <br>
+                A hardwoking one too,<br>
+                A personality that embraces peace,<br>
+                and chooses the high road <br>
+                I adore it when I achieve my goals,<br>
+                I hope you do to yours too<br>
+                From your lovely favorite blog post: <br>
+                <b>Florida korir</b>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Crafted with love by Florida Korir</p>
+    </footer>
+</body>
+
+</html>
